@@ -15,7 +15,8 @@
     "gatsby-transformer-sharp": "^2.5.0",
     "react": "latest",
     "react-dom": "latest",
-    "react-helmet": "latest"
+    "react-helmet": "latest",
+    "react-material-ui-carousel": "^1.4.3"
   },
   "scripts": {
     "develop": "gatsby develop",

@@ -62,7 +62,7 @@ export default function FindUs() {
                 <Typography variant="body2">
                     From 10.00 AM to 06.30 PM or
                 </Typography>
-                <Typography variant="body">
+                <Typography variant="body2">
                     talk to an expert <strong>+91 98405 44899</strong>
                 </Typography>
             </Grid>

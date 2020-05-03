@@ -11,10 +11,10 @@ const styles = (theme) => ({
 });
 
 const LogoComponent = (props) => {
-    console.log(props);
+    // console.log(props);
     const { classes } = props;
     return (
-        <img src={props.data.file.publicURL} className={classes.logo}/>
+        <img src={props.data.file.publicURL} className={classes.logo} alt="Site logo"/>
     )
 };
 
@@ -25,7 +25,7 @@ const LogoComponent = (props) => {
 
 const logoQuery = graphql`
   query {
-        file(relativePath: {eq: "dawnmax-logo.png"}) {
+        file(name: {eq: "dawnmax-logo"}) {
         relativePath
         name
         relativeDirectory

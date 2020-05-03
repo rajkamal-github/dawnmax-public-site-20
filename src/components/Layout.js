@@ -1,11 +1,10 @@
 import React from 'react';
-// import { Link as GatsbyLink } from 'gatsby';
-import Container from '@material-ui/core/Container';
 import TopNav from './TopNav';
 import BottomNav from './BottomNav';
-import { Box, Paper, CssBaseline, makeStyles, BottomNavigation } from '@material-ui/core';
+import { CssBaseline, makeStyles } from '@material-ui/core';
 import Main from './Main';
 import FindUs from './FindUs';
+import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,6 +22,7 @@ const Layout = (props) => {
                 {props.children}
             </Main>
             <FindUs />
+            <Divider light />
             <BottomNav />
         </div>
     )
