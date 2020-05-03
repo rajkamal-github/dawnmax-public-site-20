@@ -44,11 +44,11 @@ const HeroComponent = (props) => {
                                 image={element.publicURL}
                                 title="Contemplative Reptile"
                                 />
-                                <CardContent>
+                                {/* <CardContent>
                                     <Typography gutterBottom variant="h6" component="h6">
                                         We provide Industry- focussed services for public and private clients.
                                     </Typography>
-                                </CardContent>
+                                </CardContent> */}
                             </CardActionArea>
                         </Card>
                     )
