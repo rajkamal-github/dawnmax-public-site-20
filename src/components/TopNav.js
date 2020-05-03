@@ -26,9 +26,11 @@ const useStyles = makeStyles((theme) => ({
       color: '#45484D',
       padding: '.5rem 5rem' 
   },
-  buttonTalktoExpert: {
+  button: {
     // backgroundColor: '#F69B2F',
     // color: '#45484D'
+    margin: '.25rem .25rem',
+    backgroundColor: '#45484D'
   }
 }));
 
@@ -46,7 +48,16 @@ export default function TopNav() {
           <Typography variant="h6" className={classes.title}>
             DAWNMAX
           </Typography>
-          <Button variant="contained" color="primary" className={classes.buttonTalktoExpert}>
+          <Button variant="contained" color="primary" className={classes.button}>
+            Home
+          </Button>
+          <Button variant="contained" color="primary" className={classes.button}>
+            Services
+          </Button>
+          <Button variant="contained" color="primary" className={classes.button}>
+            About Us
+          </Button>
+          <Button variant="contained" color="primary" className={classes.button}>
             Talk to an expert?
           </Button>
           {/* <IconButton color="inherit">
