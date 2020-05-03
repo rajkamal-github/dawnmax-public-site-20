@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import { Divider } from '@material-ui/core';
 import Highlight from '../components/Highlight';
+import ProductList from '../components/ProductList';
 
 export default function Index() {
   return (
@@ -11,6 +12,7 @@ export default function Index() {
       {/* <Divider light/> */}
       <Highlight />
       {/* <Divider light/> */}
+      <ProductList />
     </Layout>
   );
 }
