@@ -1,11 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import { Typography } from '@material-ui/core';
-
+import { Typography, Link } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: '4rem 5rem',
+        padding: '4rem 2rem',
         backgroundColor: '#F9BD3B'
     },
     paper: {
@@ -29,7 +28,7 @@ export default function FindUs() {
             justify="space-between"
             alignItems="center"
             spacing={3}>
-            <Grid item xs={12} sm={12}>
+            <Grid item xs={12} sm={6}>
                 <Typography variant="h6" gutterBottom>
                     Find Us
                 </Typography>

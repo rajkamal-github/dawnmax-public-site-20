@@ -2,11 +2,16 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Copyright from '../components/Copyright';
+import { Box } from '@material-ui/core';
+import FacebookIcon from './FacebookIcon';
+import TwitterIcon from './TwitterIcon';
+import LinkedInIcon from './LinkedInIcon';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        padding: '2rem 5rem',
+        padding: '2rem 2rem',
         backgroundColor: '#F9BD3B',
         color: '#45484D'
     },
@@ -15,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         color: theme.palette.text.secondary,
     },
+    socialIcons: {
+        justifyContent: 'flex-end'
+    }
 }));
 
 export default function BottomNav() {
@@ -31,8 +39,15 @@ export default function BottomNav() {
             {/* <Grid item xs={3} sm={3}>
                 <Logo />
             </Grid> */}
-            <Grid item xs={12} sm={12}>
+            <Grid item xs={12} sm={6}>
                 <Copyright />
+            </Grid>
+            <Grid item={12} sm={6}>
+                <Box display="flex" className={classes.socialIcons}>
+                    <FacebookIcon />
+                    <TwitterIcon />
+                    <LinkedInIcon />
+                </Box>
             </Grid>
         </Grid>
     </div>

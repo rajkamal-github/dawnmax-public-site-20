@@ -8,7 +8,7 @@ import { Divider } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: '1rem 5rem',
+        padding: '1rem 2rem',
         flexGrow: 1,
       },
       productHeader:{
