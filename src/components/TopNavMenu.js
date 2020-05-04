@@ -54,6 +54,9 @@ export default function TopNavMenu(props) {
                 About Us
             </Button>
             <Button color="primary" className={classes.button}>
+                Testimonials
+            </Button>
+            <Button color="primary" className={classes.button}>
                 Talk to an expert?
             </Button>
             </div>
