@@ -5,7 +5,9 @@ import { withStyles } from '@material-ui/styles';
 const styles = (theme) => ({
     logo : {
         [theme.breakpoints.down('xs')]:{
-            display: 'none'    
+            // display: 'none',
+            height: '1.5rem',
+            width: '4rem',   
         },
         height: '5rem',
         width: '7rem',
