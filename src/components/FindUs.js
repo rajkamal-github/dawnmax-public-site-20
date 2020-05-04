@@ -48,7 +48,7 @@ export default function FindUs() {
                     Tamil Nadu, India 600042
                 </Typography>
                 <Typography variant="subtitle2" className={classes.subtitle2}>
-                    Contact No. : <strong>098405 44899</strong>
+                    Contact No. : <strong>+91 98405 44899</strong>
                 </Typography>
                 <Typography variant="subtitle2">
                     www.dawnmax.in
