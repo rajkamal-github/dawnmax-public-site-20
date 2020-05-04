@@ -11,7 +11,7 @@ import LinkedInIcon from './LinkedInIcon';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        padding: '2rem 2rem',
+        padding: '0.25rem 2rem',
         backgroundColor: '#F9BD3B',
         color: '#45484D'
     },

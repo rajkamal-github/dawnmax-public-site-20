@@ -42,24 +42,26 @@ export default function TopNavMenu(props) {
     console.log(props);
 
     return (
-        <div className={classes.navButtonBar}>
-          <Button color="primary" className={classes.button}>
-            Home
-          </Button>
-          <Button color="primary" className={classes.button}>
-            Services
-          </Button>
-          <Button color="primary" className={classes.button}>
-            About Us
-          </Button>
-          <Button color="primary" className={classes.button}>
-            Talk to an expert?
-          </Button>
-        </div>
-        <div className={classes.hamburgerMenu}>
-            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                <MenuIcon />
-            </IconButton>
+        <div>
+            <div className={classes.navButtonBar}>
+            <Button color="primary" className={classes.button}>
+                Home
+            </Button>
+            <Button color="primary" className={classes.button}>
+                Services
+            </Button>
+            <Button color="primary" className={classes.button}>
+                About Us
+            </Button>
+            <Button color="primary" className={classes.button}>
+                Talk to an expert?
+            </Button>
+            </div>
+            <div className={classes.hamburgerMenu}>
+                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                    <MenuIcon />
+                </IconButton>
+            </div>
         </div>
     );
 }

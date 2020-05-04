@@ -12,19 +12,12 @@ import { graphql, StaticQuery } from "gatsby";
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: '0rem 0rem',
-        minWidth: '100%'
-        // height: "40vh"
-        // backgroundColor: '#F9BD3B'
-    },
-    carouselImage: {
-        width: '100%',
-        height: '50vh',
-        display: 'block',
-        objectFit: 'none',
-        objectPosition: '50% 50%'
+        minWidth: '100%',
     },
     media: {
-        height: '50vh'
+        height: '60vh',
+        objectFit: 'none',
+        objectPosition: '50% 50%'
     }
 }));
 
