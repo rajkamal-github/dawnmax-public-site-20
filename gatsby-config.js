@@ -31,6 +31,6 @@ module.exports = {
     }
   ],
   siteMetadata: {
-    title: 'My page',
+    title: 'Dawnmax',
   },
 };
