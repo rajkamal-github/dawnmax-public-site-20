@@ -15,13 +15,13 @@ const useStyles = makeStyles((theme) => ({
         minWidth: '100%',
     },
     media: {
-        height: '60vh',
+        height: '80vh',
         objectFit: 'none',
         objectPosition: '50% 50%'
     }
 }));
 
-const HeroComponent = (props) => {
+const CarouselComponent = (props) => {
     const classes = useStyles();
     // console.log(props);
  
@@ -72,13 +72,13 @@ const logoQuery = graphql`
 `;
 
 
-const Hero = (props) => (
+const CarouselX = (props) => (
     <StaticQuery
       query={logoQuery}
       render={data => (
-        <HeroComponent data={data} {...props}/>
+        <CarouselComponent data={data} {...props}/>
       )}
     />
   );
   
-export default Hero;
+export default CarouselX;

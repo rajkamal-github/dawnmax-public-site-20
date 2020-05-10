@@ -14,11 +14,11 @@ const useStyles = makeStyles((theme) => ({
         // width: '20vw',
       },
       media: {
-        height: '35vh',
+        height: '25vh',
       },
 }));
 
-export default function Product(props) {
+export default function CardX(props) {
     const classes = useStyles();
     console.log(props);
 
@@ -31,12 +31,12 @@ export default function Product(props) {
                 title={props.title}
                 />
                 <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                    {props.title}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                Be fearless. Have the courage to take risks. Go where there are no guarantees. Get out of your comfort zone even if it means being uncomfortable.
-                </Typography>
+                    <Typography gutterBottom variant="overline">
+                        {props.title}
+                    </Typography>
+                    <Typography variant="caption" color="textSecondary" component="p">
+                        Be fearless. Have the courage to take risks. Go where there are no guarantees.
+                    </Typography>
                 </CardContent>
             </CardActionArea>
         </Card>

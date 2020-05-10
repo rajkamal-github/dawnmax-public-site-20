@@ -3,12 +3,15 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Product from './Product';
+import CardX from './CardX';
 import { Divider } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: '1rem 2rem',
+        padding: '2rem 8rem',
+        [theme.breakpoints.down('xs')]:{
+            padding: '0.25rem 2rem',
+        },
         flexGrow: 1,
       },
       productHeader:{
@@ -74,7 +77,7 @@ const tileData = [
     }
 ];
 
-export default function ProductList() {
+export default function CardXList() {
     const classes = useStyles();
 
     return (
@@ -87,7 +90,7 @@ export default function ProductList() {
                     tileData.map((element, index)=> {
                         return (
                             <Grid item xs={12} sm={3} key={index}>
-                                <Product {...element}/>
+                                <CardX {...element}/>
                             </Grid>
                         )
                     })

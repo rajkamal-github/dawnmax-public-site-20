@@ -5,7 +5,10 @@ import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: '1rem 2rem',
+        padding: '2rem 8rem',
+        [theme.breakpoints.down('xs')]:{
+            padding: '0.25rem 2rem',
+        },
         backgroundColor: '#F9BD3B',
         backgroundColor: '#fff'
     },
@@ -31,11 +34,9 @@ export default function Highlight() {
                 <img src="https://hatchway.in/wp-content/uploads/2020/02/ezgif.com-webp-to-png.png" className={classes.highlightImage}/>
             </Grid>
             <Grid item xs={12} sm={9}>
-                <p>
+                <Typography variant="body2" component="p">
                     We are a channel Partner of Lixil – Tostem. Recognized as the leading brand for global housing and building material industry in Japan, TOSTEM provides a comprehensive range of solutions to ensure comfortable homes for everybody through advanced technologies. We do so by drawing on over a half-century of experience and expertise in developing innovative technology that anticipates not only the needs for all here and now, but also the needs for home living tomorrow.
-                </p>
-                {/* <Typography variant="body2">
-                </Typography> */}
+                </Typography>
             </Grid>
         </Grid>
         

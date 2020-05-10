@@ -4,7 +4,10 @@ import Grid from '@material-ui/core/Grid';
 import { Typography, Link } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     root: {
-        padding: '4rem 2rem',
+        padding: '4rem 8rem',
+        [theme.breakpoints.down('xs')]:{
+            padding: '0.25rem 2rem',
+        },
         backgroundColor: '#F9BD3B'
     },
     paper: {

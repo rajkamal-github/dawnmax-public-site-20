@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
         }
       },
       menuButton: {
-        marginRight: theme.spacing(2),
+        // marginRight: theme.spacing(2),
       }
 }));
 
@@ -44,24 +44,18 @@ export default function TopNavMenu(props) {
     return (
         <div>
             <div className={classes.navButtonBar}>
-            <Button color="primary" className={classes.button}>
-                Home
-            </Button>
-            <Button color="primary" className={classes.button}>
-                Services
-            </Button>
-            <Button color="primary" className={classes.button}>
-                About Us
-            </Button>
-            <Button color="primary" className={classes.button}>
-                Testimonials
-            </Button>
-            <Button color="primary" className={classes.button}>
-                Talk to an expert?
-            </Button>
+                <Button color="primary" className={classes.button}>
+                    About
+                </Button>
+                <Button color="primary" className={classes.button}>
+                    Products
+                </Button>
+                <Button color="primary" className={classes.button}>
+                    Where to buy?
+                </Button>
             </div>
             <div className={classes.hamburgerMenu}>
-                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+                <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
                     <MenuIcon />
                 </IconButton>
             </div>
