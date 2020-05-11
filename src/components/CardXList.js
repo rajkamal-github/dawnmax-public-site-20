@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import CardX from './CardX';
+import Heading from '../components/Heading';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -12,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
         },
         flexGrow: 1,
       },
-      productHeader:{
+      header:{
           padding: '1rem 0rem'
       }
 }));
@@ -80,9 +81,7 @@ export default function CardXList() {
 
     return (
         <div className={classes.root}>
-            <Typography variant="h5" gutterBottom className={classes.productHeader}>
-                Our Products
-            </Typography>
+            <Heading headerText='Featured Products' />
             <Grid container spacing={3}>
                 {
                     tileData.map((element, index)=> {
