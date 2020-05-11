@@ -11,12 +11,12 @@ import LinkedInIcon from './LinkedInIcon';
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
-        padding: '0.25rem 8rem',
+        padding: '.5rem 8rem',
         [theme.breakpoints.down('xs')]:{
-            padding: '0.25rem 2rem',
+            padding: '.5rem 2rem',
         },
         backgroundColor: '#F9BD3B',
-        color: '#45484D'
+        color: '#45484D',
     },
     paper: {
         padding: theme.spacing(2),
@@ -32,27 +32,25 @@ export default function BottomNav() {
     const classes = useStyles();
 
     return (
-    <div className={classes.root}>
-        <Grid 
-            container
-            direction="row"
-            justify="space-between"
-            alignItems="center"
-            spacing={3}>
-            {/* <Grid item xs={3} sm={3}>
-                <Logo />
-            </Grid> */}
-            <Grid item xs={12} sm={6}>
-                <Copyright />
+        <div className={classes.root}>
+            <Grid 
+                container
+                direction="row"
+                justify="space-between"
+                alignItems="center"
+                spacing={3}
+                >
+                <Grid item xs={12} sm={6}>
+                    <Copyright />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Box display="flex" className={classes.socialIcons}>
+                        <FacebookIcon />
+                        <TwitterIcon />
+                        <LinkedInIcon />
+                    </Box>
+                </Grid>
             </Grid>
-            <Grid item={12} sm={6}>
-                <Box display="flex" className={classes.socialIcons}>
-                    <FacebookIcon />
-                    <TwitterIcon />
-                    <LinkedInIcon />
-                </Box>
-            </Grid>
-        </Grid>
-    </div>
+        </div>
     );
 }

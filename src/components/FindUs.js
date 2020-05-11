@@ -1,12 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import { Typography, Link } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
+
 const useStyles = makeStyles((theme) => ({
     root: {
         padding: '4rem 8rem',
         [theme.breakpoints.down('xs')]:{
-            padding: '0.25rem 2rem',
+            padding: '1rem 2rem',
         },
         backgroundColor: '#F9BD3B'
     },

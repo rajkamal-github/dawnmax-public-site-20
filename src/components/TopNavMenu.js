@@ -1,10 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { withStyles } from '@material-ui/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = (theme) => ({
     root: {
         // padding: '1rem 5rem',
         // width: '20vw',
@@ -35,30 +35,48 @@ const useStyles = makeStyles((theme) => ({
       menuButton: {
         // marginRight: theme.spacing(2),
       }
-}));
+});
 
-export default function TopNavMenu(props) {
-    const classes = useStyles();
-    console.log(props);
+class TopNavMenu extends React.Component {
 
-    return (
-        <div>
-            <div className={classes.navButtonBar}>
-                <Button color="primary" className={classes.button}>
-                    About
-                </Button>
-                <Button color="primary" className={classes.button}>
-                    Products
-                </Button>
-                <Button color="primary" className={classes.button}>
-                    Where to buy?
-                </Button>
+    constructor(props){
+        super(props);
+        this.handleMenuClick = this.handleMenuClick.bind(this);
+    }
+
+    handleMenuClick = (e) => {
+        e.preventDefault();
+        console.log('clicked: ' + this);
+    }
+    // console.log(this.props);
+    // const { classes } = this.props;
+    // console.log(classes.navButtonBar);
+    render(){
+        return (
+            <div>
+                <div className={this.props.classes.navButtonBar}>
+                    <Button color="primary" className={this.props.classes.button}>
+                        About
+                    </Button>
+                    <Button color="primary" className={this.props.classes.button}>
+                        Products
+                    </Button>
+                    <Button color="primary" className={this.props.classes.button}>
+                        Where to buy?
+                    </Button>
+                </div>
+                <div className={this.props.classes.hamburgerMenu}>
+                    <IconButton edge="end" 
+                        onClick={this.handleMenuClick}
+                        className={this.props.classes.menuButton} 
+                        color="inherit" 
+                        aria-label="menu">
+                        <MenuIcon />
+                    </IconButton>
+                </div>
             </div>
-            <div className={classes.hamburgerMenu}>
-                <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
-                    <MenuIcon />
-                </IconButton>
-            </div>
-        </div>
-    );
+        );
+    }
 }
+
+export default withStyles(useStyles)(TopNavMenu);

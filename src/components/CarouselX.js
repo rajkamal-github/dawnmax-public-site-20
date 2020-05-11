@@ -3,9 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Carousel from 'react-material-ui-carousel';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
 import { graphql, StaticQuery } from "gatsby";
 
 
@@ -37,11 +35,6 @@ const CarouselComponent = (props) => {
                                 image={element.publicURL}
                                 title="Contemplative Reptile"
                                 />
-                                {/* <CardContent>
-                                    <Typography gutterBottom variant="h6" component="h6">
-                                        We provide Industry- focussed services for public and private clients.
-                                    </Typography>
-                                </CardContent> */}
                             </CardActionArea>
                         </Card>
                     )

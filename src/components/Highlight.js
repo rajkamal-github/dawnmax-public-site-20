@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
+import { graphql, StaticQuery } from 'gatsby';
+import { withStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -9,8 +11,8 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]:{
             padding: '0.25rem 2rem',
         },
-        backgroundColor: '#F9BD3B',
-        backgroundColor: '#fff'
+        // backgroundColor: '#F9BD3B',
+        // backgroundColor: '#fff'
     },
     highlightImage: {
         display: 'block',
@@ -19,7 +21,18 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function Highlight() {
+const query = graphql`
+    query {
+        file(dir: {regex: "/images/highlight$/"}) {
+            id
+            publicURL
+            absolutePath
+            relativePath
+        }
+    }
+`;
+
+const HighlightComponent = (props) => {
     const classes = useStyles();
 
     return (
@@ -31,7 +44,7 @@ export default function Highlight() {
             alignItems="center"
             spacing={3}>
             <Grid item xs={12} sm={3}>
-                <img src="https://hatchway.in/wp-content/uploads/2020/02/ezgif.com-webp-to-png.png" className={classes.highlightImage}/>
+                <img src={props.data.file.publicURL} alt='Tostem' className={classes.highlightImage}/>
             </Grid>
             <Grid item xs={12} sm={9}>
                 <Typography variant="body2" component="p">
@@ -43,3 +56,14 @@ export default function Highlight() {
     </div>
     );
 }
+
+const Highlight = (props) => (
+    <StaticQuery
+      query={query}
+      render={data => (
+        <HighlightComponent data={data} {...props}/>
+      )}
+    />
+  );
+
+export default withStyles(useStyles)(Highlight);
