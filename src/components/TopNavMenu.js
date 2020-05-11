@@ -2,7 +2,11 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import MenuList from '@material-ui/core/MenuList';
+import MenuItem from '@material-ui/core/MenuItem';
 import { withStyles } from '@material-ui/styles';
+import { Popper } from '@material-ui/core';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
 const useStyles = (theme) => ({
     root: {
@@ -34,49 +38,90 @@ const useStyles = (theme) => ({
       },
       menuButton: {
         // marginRight: theme.spacing(2),
-      }
+      },
+      menuList: {
+          backgroundColor: '#F9BD3B'
+      },
 });
 
-class TopNavMenu extends React.Component {
-
-    constructor(props){
-        super(props);
-        this.handleMenuClick = this.handleMenuClick.bind(this);
+const menuData = [
+    {
+        id: 1,
+        text: 'About',
+        url: '/about'
+    },
+    {
+        id: 2,
+        text: 'Products',
+        url: '/products'
+    },
+    {
+        id: 3,
+        text: 'Where to buy?',
+        url: '/wheretobuy'
+    },
+    {
+        id: 4,
+        text: 'Contact Us',
+        url: '/contactus'
     }
+]
 
-    handleMenuClick = (e) => {
+const TopNavMenu = (props) => {
+
+    const [anchorEl, setAnchorEl] = React.useState(null);    
+    const open = Boolean(anchorEl);
+    const id = open ? 'topNavMenu-popper' : undefined;
+
+    const handleMenuClick = (e) => {
         e.preventDefault();
-        console.log('clicked: ' + this);
+        setAnchorEl(anchorEl ? null : e.currentTarget);
     }
-    // console.log(this.props);
-    // const { classes } = this.props;
-    // console.log(classes.navButtonBar);
-    render(){
-        return (
-            <div>
-                <div className={this.props.classes.navButtonBar}>
-                    <Button color="primary" className={this.props.classes.button}>
-                        About
-                    </Button>
-                    <Button color="primary" className={this.props.classes.button}>
-                        Products
-                    </Button>
-                    <Button color="primary" className={this.props.classes.button}>
-                        Where to buy?
-                    </Button>
-                </div>
-                <div className={this.props.classes.hamburgerMenu}>
-                    <IconButton edge="end" 
-                        onClick={this.handleMenuClick}
-                        className={this.props.classes.menuButton} 
-                        color="inherit" 
-                        aria-label="menu">
-                        <MenuIcon />
-                    </IconButton>
-                </div>
+
+    const handleMenuItemClose = value => e => {
+        e.preventDefault();
+        console.log(value);
+        setAnchorEl(false);
+    }
+
+    const handleMenuItemClickAway = e => {
+        e.preventDefault();
+        setAnchorEl(false);
+    }
+
+    return (
+        <div>
+            <div className={props.classes.navButtonBar}>
+                {
+                    menuData.map(x => (
+                        <Button key={x.id} onClick={handleMenuItemClose(x.url)} color="primary" className={props.classes.button}>
+                            {x.text}
+                        </Button>
+                    ))
+                }
             </div>
-        );
-    }
+            <div className={props.classes.hamburgerMenu}>
+                <IconButton edge="end" 
+                    onClick={handleMenuClick}
+                    className={props.classes.menuButton} 
+                    color="inherit" 
+                    aria-label="menu">
+                    <MenuIcon />
+                </IconButton>
+                <Popper id={id} anchorEl={anchorEl} open={open}>
+                    <ClickAwayListener onClickAway={handleMenuItemClickAway}>
+                        <MenuList autoFocusItem={open} id="menu-list-grow" className={props.classes.menuList}>
+                            {
+                                menuData.map(x => (
+                                    <MenuItem key={x.id} onClick={handleMenuItemClose(x.url)} url={x.url}>{x.text}</MenuItem>
+                                ))
+                            }
+                        </MenuList>
+                    </ClickAwayListener>
+                </Popper>
+            </div>
+        </div>
+    );
 }
 
 export default withStyles(useStyles)(TopNavMenu);
