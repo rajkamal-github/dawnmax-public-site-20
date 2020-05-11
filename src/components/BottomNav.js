@@ -24,7 +24,10 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.text.secondary,
     },
     socialIcons: {
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-end',
+        [theme.breakpoints.down('xs')]:{
+            justifyContent: 'center',
+        },
     }
 }));
 
