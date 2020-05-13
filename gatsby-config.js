@@ -28,7 +28,9 @@ module.exports = {
         name: 'images',
         path: `${__dirname}/src/content/`,
       },
-    }
+    },
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`
   ],
   siteMetadata: {
     title: 'Dawnmax',

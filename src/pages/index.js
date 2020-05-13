@@ -4,14 +4,14 @@ import CarouselX from '../components/CarouselX';
 // import { Divider } from '@material-ui/core';
 import Highlight from '../components/Highlight';
 import CardXList from '../components/CardXList';
-// import Vision from '../components/Vision';
+import Mission from '../components/Mission';
 
 export default function Index() {
   return (
     <Layout>
       <CarouselX />
       <Highlight />
-      {/* <Vision /> */}
+      <Mission />
       <CardXList />
     </Layout>
   );
