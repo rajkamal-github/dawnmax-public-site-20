@@ -23,7 +23,7 @@ const styles = (theme) => ({
         boxShadow: 'none',
     },
     missionStatement: {
-        fontWeight: 'bold',
+        // fontWeight: 'bold',
     },
     missionStatementDetailPaper:{
         backgroundColor: 'rgba(163, 161, 139, 1)',
@@ -50,14 +50,14 @@ const Mission = (props) => {
                 <Grid item xs={12} sm={6}>
                     <Paper className={classes.missionStatementPaper}>
                         <Typography variant="h2" gutterBottom className={classes.missionStatement}>
-                            Our Mission is to Become The Best Service Company in The Industry.
+                            Our Mission is to achieve <strong>MAXimum Excellence</strong> in serving our customers.
                         </Typography>
                     </Paper>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <Paper className={classes.missionStatementDetailPaper}>
                         <Typography variant="h6" gutterBottom className={classes.missionStatementDetail}>
-                            It is due to our quality-oriented approach and prompt delivery of the products, we have gained the confidence of various clients spread across the nation. Moreover, we also offer customized solution to our clients as per their specific requirements and demands. In addition to this, there are various other factors that have made us the first choice of our clients. Customization facility  I  Timely delivery  I  Competitive prices  I  Excellent customer responsiveness  I  Unending pursuit of product, process and performance optimization.
+                            We strive to achieve MAXimum excellence in serving our customers to help them choose the right construction materials and to bring their vision come true. We help our customers to choose the best brand that have state of the art design, excellent quality, pre-engineered which makes the site work easy and low skilled to assemble.
                         </Typography>
                     </Paper>
                 </Grid>
