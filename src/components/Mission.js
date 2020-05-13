@@ -10,13 +10,13 @@ const styles = (theme) => ({
             padding: '0.25rem 2rem',
         },
         flexGrow: 1,
-        backgroundColor: 'rgba(163, 161, 139, 1)',
+        backgroundColor: 'rgba(161, 162, 162, 1)',
     },
     header:{
         padding: '1rem 0rem'
     },
     missionStatementPaper: {
-        backgroundColor: 'rgba(163, 161, 139, 1)',
+        backgroundColor: 'rgba(161, 162, 162, 1)',
         padding: '2rem',
         color: '#fff',
         boxShadow: 'none',
@@ -25,7 +25,7 @@ const styles = (theme) => ({
         // fontWeight: 'bold',
     },
     missionStatementDetailPaper:{
-        backgroundColor: 'rgba(163, 161, 139, 1)',
+        backgroundColor: 'rgba(161, 162, 162, 1)',
         padding: '2rem',
         color: '#fff',
         boxShadow: 'none',

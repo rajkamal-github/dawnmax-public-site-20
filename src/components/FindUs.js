@@ -9,7 +9,8 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]:{
             padding: '1rem 2rem',
         },
-        backgroundColor: '#F9BD3B'
+        backgroundColor: 'rgba(249, 189, 59, .76)',
+        color: '#45484D',
     },
     paper: {
         padding: theme.spacing(2),
