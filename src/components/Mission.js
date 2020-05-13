@@ -5,13 +5,12 @@ import { Paper, Grid, Box, Typography } from '@material-ui/core';
 
 const styles = (theme) => ({
     root: {
-        padding: '2rem 8rem',
+        padding: '8rem 8rem',
         [theme.breakpoints.down('xs')]:{
             padding: '0.25rem 2rem',
         },
         flexGrow: 1,
-        backgroundColor: 'rgba(163, 161, 139, 1)'
-        // width:'50%',
+        backgroundColor: 'rgba(163, 161, 139, 1)',
     },
     header:{
         padding: '1rem 0rem'
